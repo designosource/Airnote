@@ -16,7 +16,8 @@ Genymotion is fast, simple to install and powerful thanks to user-friendly senso
   * Mac OS X 10.8 or above.
   * Linux Ubuntu 14.04 (Trusty Tahr) or above (64 bit);
   * Linux Debian 8 (Jessie) (64 bit).
-> Genymotion cannot be run from a virtual machine. Indeed, it needs a direct access to the hardware in order to provide OpenGL acceleration. Running Genymotion from a virtual machine prevents it to directly access the hardware components. Therefore, Genymotion is incompatible when installed from VMWare, Parallels, Hyper-V or VirtualPC.
+  
+ > Genymotion cannot be run from a virtual machine. Indeed, it needs a direct access to the hardware in order to provide OpenGL acceleration. Running Genymotion from a virtual machine prevents it to directly access the hardware components. Therefore, Genymotion is incompatible when installed from VMWare, Parallels, Hyper-V or VirtualPC.
 
 # Documentation
 
