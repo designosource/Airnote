@@ -29,5 +29,6 @@ Genymotion is fast, simple to install and powerful thanks to user-friendly senso
 # Documentation
 
 * [WikiTude](http://www.wikitude.com/developer/documentation/phonegap)
+* [Wikitude Academic License Info](http://www.wikitude.com/wikitude-academy/)
 
 * [PhoneGap](http://docs.phonegap.com/)
