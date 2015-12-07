@@ -12,7 +12,7 @@ This is an android application made with Phonegap, compiled in Android Studio. A
 Genymotion is fast, simple to install and powerful thanks to user-friendly sensor widgets and interaction features. It is available for Windows, Mac OS X and Linux operating systems.
 
 2. Genymotion is compatible with the following operating systems:
-⋅⋅* Microsoft Windows, 7, 8/8.1, 10 (32 or 64 bit);
+  ⋅⋅* Microsoft Windows, 7, 8/8.1, 10 (32 or 64 bit);
 ⋅⋅* Mac OS X 10.8 or above.
 ⋅⋅* Linux Ubuntu 14.04 (Trusty Tahr) or above (64 bit);
 ⋅⋅* Linux Debian 8 (Jessie) (64 bit).
