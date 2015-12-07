@@ -1,6 +1,10 @@
 # Airnote
 This is an android application made with Phonegap, compiled in Android Studio. Airnote is an application that allows users to leave messages on their location. Other users and themselves can see these notes utilising the camera on the phone and look around. Notes will pop up on the screen using augmented reality. You could write something on the bathroom wall, you could write down memories in a classroom for others to see.
 
+* [Work Environment](#workenvironment)
+* [Documentation](#documentation)
+
+<a name="workenvironment">
 # Work Environment
 
 * [Download Android Studio](http://developer.android.com/sdk/index.html)
@@ -26,6 +30,7 @@ Genymotion is fast, simple to install and powerful thanks to user-friendly senso
 
  > Genymotion cannot be run from a virtual machine. Indeed, it needs a direct access to the hardware in order to provide OpenGL acceleration. Running Genymotion from a virtual machine prevents it to directly access the hardware components. Therefore, Genymotion is incompatible when installed from VMWare, Parallels, Hyper-V or VirtualPC.
 
+<a name="documentation">
 # Documentation
 
 * [WikiTude](http://www.wikitude.com/developer/documentation/phonegap)
