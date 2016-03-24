@@ -17,6 +17,10 @@
  * under the License.
  */
 var app = {
+
+    // represents the device capability of launching ARchitect Worlds with specific features
+    isDeviceSupported: true,
+
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -29,23 +33,63 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        app.wikitudePlugin = cordova.require("com.wikitude.phonegap.WikitudePlugin.WikitudePlugin");
     },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+    // --- Wikitude Plugin ---
+    // Use this method to load a specific ARchitect World from either the local file system or a remote server
+    loadARchitectWorld: function(example) {
+        // check if the current device is able to launch ARchitect Worlds
+        app.wikitudePlugin.isDeviceSupported(function() {
+            app.wikitudePlugin.setOnUrlInvokeCallback(app.onUrlInvoke);
+            // inject poi data using phonegap's GeoLocation API and inject data using World.loadPoisFromJsonData
+            if ( example.requiredExtension === "ObtainPoiDataFromApplicationModel" ) {
+                navigator.geolocation.getCurrentPosition(onLocationUpdated, onLocationError);
+            }
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+            app.wikitudePlugin.loadARchitectWorld(function successFn(loadedURL) {
+                /* Respond to successful world loading if you need to */ 
+            }, function errorFn(error) {
+                alert('Loading AR web view failed: ' + error);
+            },
+            example.path, example.requiredFeatures, example.startupConfiguration
+            );
+        }, function(errorMessage) {
+            alert(errorMessage);
+        },
+        example.requiredFeatures
+        );
+    },
+    urlLauncher: function(url) {
+        var world = {
+            "path": url, 
+            "requiredFeatures": [
+                "2d_tracking",
+                "geo"
+            ],
+            "startupConfiguration": {
+                "camera_position": "back"
+            }
+        };
+        app.loadARchitectWorld(world);
+    },
+    // This function gets called if you call "document.location = architectsdk://" in your ARchitect World
+    onUrlInvoke: function (url) {
+        if (url.indexOf('captureScreen') > -1) {
+            app.wikitudePlugin.captureScreen(
+                function(absoluteFilePath) {
+                    alert("snapshot stored at:\n" + absoluteFilePath);
+                }, 
+                function (errorMessage) {
+                    alert(errorMessage);                
+                },
+                true, null
+            );
+        } else {
+            alert(url + "not handled");
+        }
     }
+    // --- End Wikitude Plugin ---
 };
 
 app.initialize();

@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+    <head>
+    
+    <!--  basic meta information -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="application/json; charset=utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" name="viewport">
+    
+    <title>Airnote</title>
+
+    <script src="architect://architect.js"></script>
+
+    <!-- jquery mobile CSS -->
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.3.2.min.css" />
+    <!-- required to set background transparent & enable "click through" -->
+    <link rel="stylesheet" href="jquery/jquery-mobile-transparent-ui-overlay.css" />
+
+    <!-- positioning of poi-radar -->
+    <link rel="stylesheet" href="css/poi-radar.css" />
+
+    <!-- jquery JS files -->
+    <script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery.mobile-1.3.2.min.js"></script>
+
+    <!-- marker representation-->
+    <script src="js/marker.js"></script>
+
+    <!-- World logic-->
+    <script type="text/javascript" src="js/capturescreen.js"></script>
+
+    <!-- radar component -->
+    <script type="text/javascript" src="js/radar.js"></script>
+
+    <script type="text/javascript">
+        function addAirnote()
+        {
+            $('#addAirnote').css("display", "block");
+            //$('.radarContainer_middle').css("display", "none");
+        };
+
+        function closeAirnote()
+        {
+            $('#addAirnote').css("display", "none");
+            //$('.radarContainer_middle').css("display", "block");
+        };
+
+        $("#panel-favorite").panel("open",optionsHash);
+    </script>
+</head>
+    <body>
+
+     <div data-role="page" id="page1" style="background: none;" >
+            
+            <!-- MAIN PAGE CONTENT -->
+            <div id="screen" onclick="addAirnote()">
+            
+            </div>
+
+            <div id="addAirnote">
+                <!--<textarea style="border: 0;box-shadow: 0;resize: none;height: 100px;margin-top: 0px;">Add an airnote on your location...
+                </textarea>-->
+                <p style="height: 80px;margin-top: 0px;padding: 8px 8px;padding-bottom:0;border-style: solid;border-bottom-color: #d6d6d5;border-top: 0; border-left: 0;border-right: 0;">Add an airnote on your location...</p>
+
+                <a href="" id="add" style="width: 50%;height:40px;display: inline-block;float:left;"><img src="assets/add.png" alt="" style="height: 20px;position: absolute;
+                    margin: auto;
+                    top: 67%;
+                    left: -50%;
+                    right: 0;
+                    bottom: 0;" onclick="closeAirnote()"></a>
+                <a href="" id="close" style="width: 49%;height:40px;display: inline-block;float:left;border-style: solid;border-left-color: #d6d6d5;border-top: 0; border-bottom: 0;border-right: 0;"><img src="assets/close.png" alt="" style="height: 25px; position: absolute;
+                    margin: auto;
+                    top: 67%;
+                    left: 50%;
+                    right: 0;
+                    bottom: 0;" onclick="closeAirnote()"></a>
+            </div>
+
+            <!-- the radar div - Wikitude SDK radar will be drawn into this div -->
+            <div class="radarContainer_middle" id="radarContainer"></div>
+
+            <!-- footer navigation -->
+            <div class="nav">
+                <ul>
+                    <li><a href="javascript: World.captureScreen()" class="nav_screenshot" data-icon="refresh"></a></li>
+                    <li><a href="" class="nav_share"></a></li>
+                    <li><a href="#panel-favorite" class="nav_favorite"></a></li>
+                    <li><a href="javascript: World.showRange();" class="nav_setting" data-icon="refresh"></a></li>
+                </ul>
+            </div>
+
+            <!-- PANELS, ONLY VISIBLE ON DEMAND -->
+
+            <!-- panel containing POI detail information -->
+            <div data-role="panel" id="panel-poidetail" data-position="right" data-display="overlay" style="background-color:#F0F0F0;" data-theme="c">
+
+                <!-- header with "close" button -->
+                <div data-role="header" data-theme="c">
+                    <h1>Details</h1>
+                    <a href="#header" data-rel="close">Close</a>
+                </div>
+
+                <!-- content of POI detail page, you may also add thumbnails etc. here if you like -->
+                 <div data-role="content">
+
+                    <!-- title -->
+                    <h3 id="poi-detail-title"></h3>
+
+                    <!-- description -->
+                    <h4 id="poi-detail-description"></h4>
+
+                    <!-- distance -->
+                    <h4>Distance: <a id="poi-detail-distance"></a></h4>
+
+                    <!-- more button-->
+                    <a href="javascript: World.onPoiDetailMoreButtonClicked();" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true">More</a>
+                </div>
+            </div>
+
+
+
+            <!-- range panel -->
+            <div data-role="panel" id="panel-distance" data-position="left" data-display="overlay" style="background-color:#F0F0F0;" data-theme="c">
+                    <!-- header with close button -->
+                    <div data-role="header" data-theme="c" style="width: 100%;">
+                        <a href="#header" data-rel="close">Close</a>
+                        <h1>Settings</h1>
+                    </div>
+
+                    <!-- distance information, calculated/updated in code  -->
+                    <div data-role="content">
+                        <h4>Application Settings</h4>
+                        <!-- Range in m/km-->
+                        <h4> Range: <a id="panel-distance-value"></a></h4>
+
+                        <!-- Amount of visible places -->
+                        <h4> Visible: <a id="panel-distance-places"></a></h4>
+
+                        <!-- default slider -->
+                        <input id="panel-distance-range" type="range" data-highlight="true" name="rangeSlider" min="0" max="100" value="100" data-show-value="false" step="5" data-popup-enabled="false">
+                    </div>
+
+                    <div style="width: 100%;background-color: #e9e9e9;border-style: solid;
+    border-bottom-color: #d6d6d5;border-top: 0; border-left: 0;border-right: 0;">
+                        <p style="padding: 20px 20px;">By registering and having an account you are indicating that you have read the Privacy Policy and agree to the Terms of Service.</p>
+                    </div>
+
+                    <div class="privateinfo">
+                        <h4>Private information</h4>
+                        <p><img src="assets/mail.png" alt=""><span style="margin-left: 37px;">mooretom@outlook.com</span></p>
+                        <a href="" class="mybtn" style="margin: 0 auto; color: white;
+    text-decoration: none;  margin-top: 10px; display:block;text-align: center;
+    background-color: #4f7fc1;line-height:27px;
+    border-radius: 3px;
+    height: 27px;
+    width: 200px;">Confirm your account</a><br>
+                        <a href="" class="mybtn" style="margin: 0 auto;color: white;
+    text-decoration: none;  margin-top: 0px; display:block;text-align: center;
+    background-color: #4f7fc1;line-height:27px;
+    border-radius: 3px;
+    height: 27px;
+    width: 200px;">Log Out</a>
+                    </div>
+            </div>
+
+
+            <!-- panel containing POI detail information -->
+            <div data-role="panel" id="panel-favorite" data-position="left" data-display="overlay" style="background-color:#F0F0F0;" data-theme="c">
+
+                <!-- header with "close" button -->
+                <div data-role="header" data-theme="c">
+                    <h1>Details</h1>
+                    <a href="#header" data-rel="close">Close</a>
+                </div>
+
+                <!-- content of POI detail page, you may also add thumbnails etc. here if you like -->
+                 <div data-role="content">
+
+                    <div class="favlist" style="margin-bottom:80px;">
+                        <h4>Your favorite writing locations</h4>
+                        <p><img src="assets/ster.png" alt=""><span style="margin-left: 37px;">Antwerpen - Grote Markt</span></p>
+                        <p><img src="assets/ster.png" alt=""><span style="margin-left: 37px;">Mechelen - Creativity Gym</span></p>
+                    </div>
+
+                    <div class="favlist" style="border-style: solid;
+    border-bottom-color: #dddddd;border-bottom: 0; border-left: 0;border-right: 0;">
+                        <h4>Users' favorite locations near you</h4>
+                        <p><img src="assets/ster.png" alt=""><span style="margin-left: 37px;">Mechelen - Creativity Gym</span></p>
+                        <p><img src="assets/ster.png" alt=""><span style="margin-left: 37px;">Mechelen - Campus Kruidtuin</span></p>
+                        <p><img src="assets/ster.png" alt=""><span style="margin-left: 37px;">Mechelen - Veemarkt</span></p>
+                    </div>
+                </div>
+            </div>
+
+        
+
+        </div>
+
+    </body>
+    
+</html>
