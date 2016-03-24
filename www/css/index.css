@@ -30,29 +30,33 @@ a:active
 }
 
 a:hover{
-    background-color: #4fa8dd;
+    background-color: #ffffff;
 }
 
-#launchbtn{
+.launchbtn{
     font-weight:normal;
-    color: #FFFFFF;
+    color: #1e2a74;
     left:0;
     right:0;
     margin-left:auto;
     margin-right:auto;
-    position: absolute;
     bottom: 100px;
     display: block;
     height: 40px;
     line-height: 40px;
     font-size: 20px;
-    width: 40%;
+    width: 80%;
     text-align: center;
-    border: 1.5px solid #FFFFFF;
+    border: 1.5px solid #1e2a74;
+    margin-bottom: 20px;
 }
 
-p{font-weight:normal;width: 100%;text-align:center;font-weight:normal;
-    color: #FFFFFF;
+.login_collection{
+    margin-top: 115%;
+}
+
+.registerbtn{font-weight:normal;width: 100%;text-align:center;font-weight:normal;
+    color: #1e2a74;
     left:0;
     right:0;
     margin-left:auto;

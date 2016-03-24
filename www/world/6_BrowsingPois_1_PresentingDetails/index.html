@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+    <head>
+    
+    <!--  basic meta information -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="application/json; charset=utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" name="viewport">
+    
+    <title>My ARchitect World</title>
+
+    <script src="architect://architect.js"></script>
+    <script src="../ade.js"></script>
+
+    <!-- jquery mobile CSS -->
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.3.2.min.css" />
+    <!-- required to set background transparent & enable "click through" -->
+    <link rel="stylesheet" href="jquery/jquery-mobile-transparent-ui-overlay.css" />
+
+    <!-- jquery JS files -->
+    <script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery.mobile-1.3.2.min.js"></script>
+
+    <!-- marker representation-->
+    <script src="js/marker.js"></script>
+
+        <!-- styling -->
+        <link rel="stylesheet" href="css/style.css" />
+
+    <!-- World logic-->
+    <script type="text/javascript" src="js/world.js"></script>
+</head>
+
+    <body >
+     <div data-role="page" id="page1" style="background: none;" >
+
+         <!-- MAIN PAGE CONTENT -->
+
+         <!-- footer navigation -->
+         <div class="nav">
+             <ul>
+                 <li><a href="#panel-settings" class="nav_drinks">Drinks</a></li>
+                 <li><a href="#panel-settings" class="nav_food">Foods</a></li>
+                 <li><a href="#panel-settings" class="nav_sights">Sights</a></li>
+             </ul>
+         </div>
+
+         <!-- PANELS, ONLY VISIBLE ON DEMAND -->
+         <!-- panel containing POI detail information -->
+
+         <!-- range panel -->
+         <div data-role="panel" id="panel-settings" data-position="left" data-display="overlay" style="background-color:#F0F0F0;width: 100%;" data-theme="c">
+             <!-- header with close button -->
+             <div data-role="header" data-theme="c" style="width: 100%;">
+                 <a href="#header" data-rel="close">Close</a>
+                 <h1>Settings</h1>
+             </div>
+
+             <!-- distance information, calculated/updated in code  -->
+             <div data-role="content">
+                 <h4>Application Settings</h4>
+                 <!-- Range in m/km-->
+                 <h4> Range: <a id="panel-distance-value"></a></h4>
+
+                 <!-- Amount of visible places -->
+                 <h4> Visible: <a id="panel-distance-places"></a></h4>
+
+                 <!-- default slider -->
+                 <input id="panel-distance-range" type="range" data-highlight="true" name="rangeSlider" min="0" max="100" value="100" data-show-value="false" step="5" data-popup-enabled="false">
+             </div>
+
+             <div style="width: 100%;background-color: #e9e9e9;border-style: solid;
+    border-bottom-color: #d6d6d5;border-top: 0; border-left: 0;border-right: 0;">
+                 <p style="padding: 20px 20px;">By registering and having an account you are indicating that you have read the Privacy Policy and agree to the Terms of Service.</p>
+             </div>
+
+             <div class="privateinfo">
+                 <h4>Private information</h4>
+                 <p><img src="assets/mail.png" alt=""><span style="margin-left: 37px;">mooretom@outlook.com</span></p>
+                 <a href="" class="mybtn" style="margin: 0 auto; color: white;
+    text-decoration: none;  margin-top: 10px; display:block;text-align: center;
+    background-color: #4f7fc1;line-height:27px;
+    border-radius: 3px;
+    height: 27px;
+    width: 200px;">Confirm your account</a><br>
+                 <a href="" class="mybtn" style="margin: 0 auto;color: white;
+    text-decoration: none;  margin-top: 0px; display:block;text-align: center;
+    background-color: #4f7fc1;line-height:27px;
+    border-radius: 3px;
+    height: 27px;
+    width: 200px;">Log Out</a>
+             </div>
+         </div>
+
+            <!-- panel containing POI detail information -->
+            <div data-role="panel" id="panel-poidetail" data-position="right" data-display="overlay" style="background-color:#F0F0F0;width: 100%;" data-theme="c">
+
+                <!-- header with "close" button -->
+                <div data-role="header" data-theme="c">
+                    <h1>Details</h1>
+                    <a href="#header" data-rel="close">Close</a>
+                </div>
+
+                <!-- content of POI detail page, you may also add thumbnails etc. here if you like -->
+                 <div data-role="content">
+
+                    <!-- title -->
+                    <h3 id="poi-detail-title"></h3>
+
+                    <!-- description -->
+                    <h4 id="poi-detail-description"></h4>
+
+                    <!-- distance -->
+                    <h4>Distance: <a id="poi-detail-distance"></a></h4>
+                </div>
+            </div>
+
+     </div>
+
+    </body>
+    
+</html>
