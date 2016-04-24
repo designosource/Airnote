@@ -1,3 +1,18 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    options = { enableHighAccuracy: true };
+	navigator.geolocation.getCurrentPosition(onSuccess, onError, options)
+}
+
+function onSuccess(position) {
+    alert("position" + position);
+}
+
+function onError(error) {
+    alert("Please turn on your location and restart the app.");
+}
+
 // information about server communication. This sample webservice is provided by Wikitude and returns random dummy places near given location
 var ServerInformation = {
 	POIDATA_SERVER: "http://example.wikitude.com/GetSamplePois/",
