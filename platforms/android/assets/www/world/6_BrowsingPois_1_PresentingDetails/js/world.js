@@ -1,29 +1,22 @@
-window.onload = function() {
-  options = { enableHighAccuracy: true };
-  navigator.geolocation.getCurrentPosition(onSuccess, onError, options)
+/*var onSuccess = function(position) {
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
 };
 
-function onSuccess(position) {
-    alert("position: " + position);
-}
-
+// onError Callback receives a PositionError object
+//
 function onError(error) {
-    alert("Please turn on your location and restart the app.");
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
 }
 
-/*AR.context.onLocationChanged = function(latitude, longitude, altitude, accuracy){
-  var latitude = this.latitude;
-
-  alert(latitude);
-}*/
-
-// information about server communication. This sample webservice is provided by Wikitude and returns random dummy places near given location
-var ServerInformation = {
-	POIDATA_SERVER: "http://example.wikitude.com/GetSamplePois/",
-	POIDATA_SERVER_ARG_LAT: "lat",
-	POIDATA_SERVER_ARG_LON: "lon",
-	POIDATA_SERVER_ARG_NR_POIS: "nrPois"
-};
+navigator.geolocation.getCurrentPosition(onSuccess, onError);*/
 
 // implementation of AR-Experience (aka "World")
 var World = {
