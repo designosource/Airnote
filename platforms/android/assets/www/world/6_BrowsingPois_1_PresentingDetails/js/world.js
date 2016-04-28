@@ -1,17 +1,21 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    options = { enableHighAccuracy: true };
-	navigator.geolocation.getCurrentPosition(onSuccess, onError, options)
-}
+window.onload = function() {
+  options = { enableHighAccuracy: true };
+  navigator.geolocation.getCurrentPosition(onSuccess, onError, options)
+};
 
 function onSuccess(position) {
-    alert("position" + position);
+    alert("position: " + position);
 }
 
 function onError(error) {
     alert("Please turn on your location and restart the app.");
 }
+
+/*AR.context.onLocationChanged = function(latitude, longitude, altitude, accuracy){
+  var latitude = this.latitude;
+
+  alert(latitude);
+}*/
 
 // information about server communication. This sample webservice is provided by Wikitude and returns random dummy places near given location
 var ServerInformation = {
