@@ -1,4 +1,4 @@
-.btn_settings{background-image: url("../assets/settings.png");background-size: 128px 128px;background-repeat: none;top:0;left:0;margin: 20px;}
+.btn_settings{background-image: url("../assets/settings.png");background-size: 50px 50px;top:0;left: 0;height: 50px;width: 50px;display: block;}
 
 .nav{
 	position:absolute;
