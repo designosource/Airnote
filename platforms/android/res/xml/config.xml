@@ -20,6 +20,7 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
+    <icon src="www/img/icon.png" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />

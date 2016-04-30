@@ -93,3 +93,7 @@ var app = {
 };
 
 app.initialize();
+
+setTimeout(function () {
+       window.location.href = "javascript:app.loadARchitectWorld(getSamplePath(5, 0));"; 
+}, 2000);

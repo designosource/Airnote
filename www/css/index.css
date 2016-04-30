@@ -2,68 +2,18 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-}
 
-#page1
-{
-    text-shadow: 0 0 0px #000; /* horizontal-offset vertical-offset 'blur' colour */
-    -moz-text-shadow: 0 0 0px #000;
-    -webkit-text-shadow: 0 0 0px #000;
     width: 100%;
-    height: 100%;
     background-image: url("../img/splash.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: center center;
+    background-repeat: no-repeat;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active
-{
-    color: #FFFFFF;
-    text-decoration: none;
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: auto;
 }
-
-a:hover{
-    background-color: #ffffff;
-}
-
-.launchbtn{
-    font-weight:normal;
-    color: #1e2a74;
-    left:0;
-    right:0;
-    margin-left:auto;
-    margin-right:auto;
-    bottom: 100px;
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px;
-    width: 80%;
-    text-align: center;
-    border: 1.5px solid #1e2a74;
-    margin-bottom: 20px;
-}
-
-.login_collection{
-    margin-top: 115%;
-}
-
-.registerbtn{font-weight:normal;width: 100%;text-align:center;font-weight:normal;
-    color: #1e2a74;
-    left:0;
-    right:0;
-    margin-left:auto;
-    margin-right:auto;
-    position: absolute;
-    bottom: 50px;
-    display: block;
-    height: 15px;
-    line-height: 15px;
-    font-size: 15px;}

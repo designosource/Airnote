@@ -1,3 +1,5 @@
+.btn_settings{background-image: url("../assets/settings.png");background-size: 128px 128px;background-repeat: no-repeat;top:0;left:0;margin: 20px;}
+
 .nav{
 	position:absolute;
 	bottom: 0;
@@ -12,24 +14,27 @@
 	padding: 0 0;
 }
 
-.nav li{display: inline-block;width: 33%;float:left;}
+.nav li{display: inline-block;width: 33%;float:left;height: 50px;}
 
 .nav li a{
 	width: 97.5%;
 	height: 50px;
+	text-align: center;
 	background-size: 100% 50px;
-	float: left;
-	padding-left: 13%;
-	padding-top: 20px;
+	line-height: 50px;
+	display: block;
+	text-decoration: none;
+	color: #19214a;
 }
 
 .nav_drinks{
 	background-image: url("../assets/nav_drinks.png");
-	margin-left: 0.5%;	
+	margin-right: 0.5%;	
 }
 
 .nav_food{
-	background-image: url("../assets/nav_foods.png");	
+	background-image: url("../assets/nav_foods.png");
+	margin-right: 0.5%;	
 }
 
 .nav_sights{
