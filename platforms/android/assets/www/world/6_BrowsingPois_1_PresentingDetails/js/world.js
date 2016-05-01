@@ -156,15 +156,8 @@ var World = {
 
 		// deselect AR-marker when user exits detail screen div.
 		$("#panel-poidetail").on("panelbeforeclose", function(event, ui) {
-			World.currentMarker.setDeselected(World.currentMarker);
+			//World.currentMarker.setDeselected(World.currentMarker);
 		});
-	},
-
-	// screen was clicked but no geo-object was hit
-	onScreenClick: function onScreenClickFn() {
-		/*if (World.currentMarker) {
-			World.currentMarker.setDeselected(World.currentMarker);
-		}*/
 	},
 
 	getMaxDistance: function getMaxDistanceFn() {
@@ -207,7 +200,28 @@ var World = {
 	// helper to sort places by distance, descending
 	sortByDistanceSortingDescending: function(a, b) {
 		return b.distanceToUser - a.distanceToUser;
-	}
+	},
+	onNavigateClicked: function onMarkerSelectedFn(marker) {
+
+		// deselect previous marker
+		if (World.currentMarker) {
+			if (World.currentMarker.poiData.id == marker.poiData.id) {
+				return;
+			}
+			World.currentMarker.setDeselected(World.currentMarker);
+		}
+
+		// highlight current one
+		marker.setSelected(marker);
+		World.currentMarker = marker;
+	},
+
+	// screen was clicked but no geo-object was hit
+	onScreenClick: function onScreenClickFn() {
+		if (World.currentMarker) {
+			World.currentMarker.setDeselected(World.currentMarker);
+		}
+	},
 
 };
 
