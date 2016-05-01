@@ -17,6 +17,9 @@ var World = {
 	// The last selected marker
 	currentMarker: null,
 
+	locationUpdateCounter: 0,
+	updatePlacemarkDistancesEveryXLocationUpdates: 10,
+
 	// called to inject new POI data
 	loadPoisFromJsonData: function loadPoisFromJsonDataFn(poiData) {
 
@@ -42,7 +45,17 @@ var World = {
 			World.markerList.push(new Marker(singlePoi));
 		}
 
+		// updates distance information of all placemarks
+		World.updateDistanceToUserValues();
+		
 		World.updateStatusMessage(currentPlaceNr + ' places loaded');
+	},
+
+	// sets/updates distances of all makers so they are available way faster than calling (time-consuming) distanceToUser() method all the time
+	updateDistanceToUserValues: function updateDistanceToUserValuesFn() {
+		for (var i = 0; i < World.markerList.length; i++) {
+			World.markerList[i].distanceToUser = World.markerList[i].markerObject.locations[0].distanceToUser();
+		}
 	},
 
 	// updates status message shon in small "i"-button aligned bottom center
@@ -60,7 +73,23 @@ var World = {
 		});
 	},
 
-	// fired when user pressed maker in cam
+	// location updates, fired every time you call architectView.setLocation() in native environment
+	locationChanged: function locationChangedFn(lat, lon, alt, acc) {
+
+		// request data if not already present
+		if (!World.initiallyLoadedData) {
+			World.requestDataFromLocal(lat, lon);
+			World.initiallyLoadedData = true;
+		} else if (World.locationUpdateCounter === 0) {
+			// update placemark distance information frequently, you max also update distances only every 10m with some more effort
+			World.updateDistanceToUserValues();
+		}
+
+		// helper used to update placemark information every now and then (e.g. every 10 location upadtes fired)
+		World.locationUpdateCounter = (++World.locationUpdateCounter % World.updatePlacemarkDistancesEveryXLocationUpdates);
+	},
+
+		// fired when user pressed maker in cam
 	onMarkerSelected: function onMarkerSelectedFn(marker) {
 		World.currentMarker = marker;
 
@@ -86,16 +115,6 @@ var World = {
 		$("#panel-poidetail").on("panelbeforeclose", function(event, ui) {
 			World.currentMarker.setDeselected(World.currentMarker);
 		});
-	},
-
-	// location updates, fired every time you call architectView.setLocation() in native environment
-	locationChanged: function locationChangedFn(lat, lon, alt, acc) {
-
-		// request data if not already present
-		if (!World.initiallyLoadedData) {
-			World.requestDataFromLocal(lat, lon);
-			World.initiallyLoadedData = true;
-		}
 	},
 
 	// fired when user pressed maker in cam
