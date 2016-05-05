@@ -1,7 +1,9 @@
 var myJsonData = [{
    "id": "1",
-   "longitude": "4.4809117",
-   "latitude": "51.0267653",
+   //"longitude": "4.4809117",
+   //"latitude": "51.0267653",
+   "longitude": "4.4313577",
+   "latitude": "51.1573427",
    "description": "HEMA prides itself in developing many of its products itself, including food and books. On its website HEMA says it develops all its products itself.",
    "altitude": "100.0",
    "name": "HEMA"
