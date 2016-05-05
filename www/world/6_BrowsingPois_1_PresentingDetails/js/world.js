@@ -22,7 +22,7 @@ var World = {
 
 	// called to inject new POI data
 	loadPoisFromJsonData: function loadPoisFromJsonDataFn(poiData) {
-
+		AR.context.destroyAll();
 		// empty list of visible markers
 		World.markerList = [];
 
