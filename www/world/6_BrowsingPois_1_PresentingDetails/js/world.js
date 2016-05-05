@@ -89,34 +89,6 @@ var World = {
 		World.locationUpdateCounter = (++World.locationUpdateCounter % World.updatePlacemarkDistancesEveryXLocationUpdates);
 	},
 
-		// fired when user pressed maker in cam
-	onMarkerSelected: function onMarkerSelectedFn(marker) {
-		World.currentMarker = marker;
-
-		/*
-			In this sample a POI detail panel appears when pressing a cam-marker (the blue box with title & description), 
-			compare index.html in the sample's directory.
-		*/
-		// update panel values
-		$("#poi-detail-title").html(marker.poiData.title);
-		$("#poi-detail-description").html(marker.poiData.description);
-
-		// distance and altitude are measured in meters by the SDK. You may convert them to miles / feet if required.
-		var distanceToUserValue = (marker.distanceToUser > 999) ? ((marker.distanceToUser / 1000).toFixed(2) + " km") : (Math.round(marker.distanceToUser) + " m");
-
-		$("#poi-detail-distance").html(distanceToUserValue);
-
-		// show panel
-		$("#panel-poidetail").panel("open", 123);
-
-		$(".ui-panel-dismiss").unbind("mousedown");
-
-		// deselect AR-marker when user exits detail screen div.
-		$("#panel-poidetail").on("panelbeforeclose", function(event, ui) {
-			World.currentMarker.setDeselected(World.currentMarker);
-		});
-	},
-
 	// fired when user pressed maker in cam
 	/*onMarkerSelected: function onMarkerSelectedFn(marker) {
 
@@ -133,6 +105,8 @@ var World = {
 		World.currentMarker = marker;
 	},*/
 
+
+	// fired when user pressed maker in cam
 	onMarkerSelected: function onMarkerSelectedFn(marker) {
 		World.currentMarker = marker;
 
@@ -155,8 +129,22 @@ var World = {
 		$(".ui-panel-dismiss").unbind("mousedown");
 
 		// deselect AR-marker when user exits detail screen div.
-		$("#panel-poidetail").on("panelbeforeclose", function(event, ui) {
-			//World.currentMarker.setDeselected(World.currentMarker);
+		/*$("#panel-poidetail").on("panelbeforeclose", function(event, ui) {
+			World.currentMarker.setDeselected(World.currentMarker);
+		});*/
+
+		$("#close_btn").click(function() {
+  			World.currentMarker.setDeselected(World.currentMarker);
+  			$("#panel-poidetail").panel("close");
+		});
+
+		$("#panel-poidetai").panel({
+          swipeClose: false
+        });
+		
+		$("#donav_btn").click(function() {
+  			World.currentMarker = marker;
+  			$("#panel-poidetail").panel("close");
 		});
 	},
 
@@ -201,7 +189,8 @@ var World = {
 	sortByDistanceSortingDescending: function(a, b) {
 		return b.distanceToUser - a.distanceToUser;
 	},
-	onNavigateClicked: function onMarkerSelectedFn(marker) {
+
+	/*onNavigateClicked: function onMarkerSelectedFn(marker) {
 
 		// deselect previous marker
 		if (World.currentMarker) {
@@ -214,7 +203,12 @@ var World = {
 		// highlight current one
 		marker.setSelected(marker);
 		World.currentMarker = marker;
-	},
+
+		//nav details + UI changes
+
+		//show distance + stop
+		//hide rest UI
+	},*/
 
 	// screen was clicked but no geo-object was hit
 	onScreenClick: function onScreenClickFn() {
