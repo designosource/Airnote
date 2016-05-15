@@ -39,6 +39,7 @@ var World = {
 				"longitude": parseFloat(poiData[currentPlaceNr].longitude),
 				"altitude": parseFloat(poiData[currentPlaceNr].altitude),
 				"title": poiData[currentPlaceNr].name,
+				"address": poiData[currentPlaceNr].address,
 				"description": poiData[currentPlaceNr].description
 			};
 
@@ -117,6 +118,7 @@ var World = {
 		// update panel values
 		$("#poi-detail-title").html(marker.poiData.title);
 		$("#poi-detail-description").html(marker.poiData.description);
+		$("#poi-detail-address").html(marker.poiData.address);
 
 		// distance and altitude are measured in meters by the SDK. You may convert them to miles / feet if required.
 		var distanceToUserValue = (marker.distanceToUser > 999) ? ((marker.distanceToUser / 1000).toFixed(2) + " km") : (Math.round(marker.distanceToUser) + " m");

@@ -34,6 +34,12 @@
 
     <!-- World logic-->
     <script type="text/javascript" src="js/world.js"></script>
+
+    <!-- GMAPS -->
+    <script type="text/javascript" src="js/directions.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmcG1TWd1K7NCMYovjb5FIQ0d8Q0NDf9M&callback=initMap">
+    </script>
 </head>
 
     <body>
@@ -41,6 +47,12 @@
 
          <!-- MAIN PAGE CONTENT -->
          <a href="#panel-settings" class="btn_settings"></a>
+
+    <div id="floating-panel" style="display: none;">
+      
+    </div>
+    <div id="right-panel" style="height: 200px;"></div>
+    <div id="map" style="height: 200px;width: 100%;display: none;"></div>
 
         <!-- footer navigation -->
          <div class="nav">
@@ -115,6 +127,9 @@
 
                     <!-- description -->
                     <h4 id="poi-detail-description"></h4>
+
+                    <!-- address -->
+                    <h4 id="poi-detail-address"></h4>
 
                     <!-- distance -->
                     <h4>Distance: <a id="poi-detail-distance"></a></h4>
