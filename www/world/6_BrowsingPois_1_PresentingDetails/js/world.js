@@ -145,6 +145,8 @@ var World = {
         });
 		
 		$("#donav_btn").click(function() {
+			$("#stop_nav").show();
+			$("#right-panel").show();
   			World.currentMarker = marker;
   			$("#panel-poidetail").panel("close");
 		});
@@ -159,7 +161,7 @@ var World = {
 		var maxDistanceMeters = World.markerList[0].distanceToUser;
 
 		// return maximum distance times some factor >1.0 so ther is some room left and small movements of user don't cause places far away to disappear.
-		return maxDistanceMeters * 1.1;
+		return maxDistanceMeters * 10.1;
 	},
 
 	/*
