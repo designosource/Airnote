@@ -40,6 +40,10 @@ var World = {
 				"altitude": parseFloat(poiData[currentPlaceNr].altitude),
 				"title": poiData[currentPlaceNr].name,
 				"address": poiData[currentPlaceNr].address,
+				"img": poiData[currentPlaceNr].img,
+				"review1": poiData[currentPlaceNr].review1,
+				"review2": poiData[currentPlaceNr].review2,
+				"rating": poiData[currentPlaceNr].rating,
 				"description": poiData[currentPlaceNr].description
 			};
 
@@ -124,6 +128,12 @@ var World = {
 		var distanceToUserValue = (marker.distanceToUser > 999) ? ((marker.distanceToUser / 1000).toFixed(2) + " km") : (Math.round(marker.distanceToUser) + " m");
 
 		$("#poi-detail-distance").html(distanceToUserValue);
+
+		$("#poi-detail-img").attr("src", marker.poiData.img);
+
+		$("#poi-detail-review1").html(marker.poiData.review1);
+		$("#poi-detail-review2").html(marker.poiData.review2);
+		$("#poi-detail-rating").html(marker.poiData.rating);
 
 		// show panel
 		$("#panel-poidetail").panel("open", 123);

@@ -10,7 +10,6 @@ var user_longitude = "4.4822998";
 
 $( document ).ready(function() {
     $("#stop_nav").on("click", function() {
-        alert("click");
         $(this).hide();
         $("#right-panel").hide();
         World.currentMarker.setDeselected(World.currentMarker);
