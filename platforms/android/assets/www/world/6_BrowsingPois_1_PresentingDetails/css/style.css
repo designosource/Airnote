@@ -284,20 +284,39 @@ html{
 #stop_nav{position: absolute;margin: 0 auto;margin-top: 550px;margin-left: 55px;background-image: url(../assets/btn-1.svg);}
 
 /*gmaps*/
+#directions_api_txt{
+	display: none;
+	height: 60px !important;
+	width: 100%;
+	background-image: url(../assets/btn-1.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-top: 460px;
+	padding-top: 5px;
+}
 
 #right-panel{
-	height: 50px !important;
+	height: 20px !important;
 	z-index: -1px;
 	display: block;
 	overflow: auto;
-	margin-top: 470px;
+	display: none;
+	padding: 5px;
+	padding-top: 10px;
+	margin-top: 10px;
 }
 
 #right-panel .adp-warnbox{display: none;}
 
-#right-panel .adp-directions{background-color: white;width: 70%;margin: 0 auto;
-	background-image: url(../assets/btn-1.svg);
-	background-size: 100% 100%;
+#right-panel .adp-directions{width: 70%;margin: 0 auto;
+	height: 30px;
+	overflow: auto;
+	padding-top: 1px;
+
+}
+
+#right-panel .adp-step, #right-panel .adp-substep {border:0;margin-top:1px;
+	padding: 0px 3px 3px 1px;
 }
 
 #right-panel .adp-placemark, #right-panel .adp-summary{

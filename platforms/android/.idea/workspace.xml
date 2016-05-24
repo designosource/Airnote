@@ -39,18 +39,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45939085">
-              <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.42992875">
+              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding>
-                <element signature="e#3030#3050#0" expanded="true" />
-                <element signature="e#3161#3188#0" expanded="true" />
-                <element signature="e#3430#3469#0" expanded="true" />
-                <element signature="e#3800#3986#0" expanded="true" />
-                <element signature="e#4008#4035#0" expanded="true" />
-                <element signature="e#4238#4277#0" expanded="true" />
-                <element signature="e#4409#4451#0" expanded="true" />
-                <element signature="e#4750#4783#0" expanded="true" />
-                <element signature="e#4951#4983#0" expanded="true" />
+                <element signature="e#3079#3099#0" expanded="true" />
+                <element signature="e#3210#3237#0" expanded="true" />
+                <element signature="e#3479#3518#0" expanded="true" />
+                <element signature="e#3849#4035#0" expanded="true" />
+                <element signature="e#4057#4084#0" expanded="true" />
+                <element signature="e#4287#4326#0" expanded="true" />
+                <element signature="e#4458#4500#0" expanded="true" />
+                <element signature="e#4799#4832#0" expanded="true" />
+                <element signature="e#5000#5032#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+              <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1477,7 +1477,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7315921890000" />
+        <entry key="$PROJECT_DIR$" value="7315941904000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1865,8 +1865,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="44" />
+    <option name="x" value="46" />
+    <option name="y" value="53" />
     <option name="width" value="1342" />
     <option name="height" value="787" />
   </component>
@@ -1895,8 +1895,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -2086,9 +2089,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2097,7 +2097,7 @@
     <property name="android.project.structure.last.selected" value="android" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="device.picker.selection" value="Nexus_5_API_22_x86" />
+    <property name="device.picker.selection" value="4e87c189" />
   </component>
   <component name="RunManager" selected="Android Application.android">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2404,7 +2404,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="44" width="1342" height="787" extended-state="0" />
+    <frame x="46" y="53" width="1342" height="787" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2412,7 +2412,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3859375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29508197" sideWeight="0.68538463" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29508197" sideWeight="0.68538463" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24954462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29508197" sideWeight="0.3146154" order="7" side_tool="true" content_ui="tabs" />
@@ -2455,17 +2455,117 @@
     <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3079#3099#0" expanded="true" />
+            <element signature="e#3210#3237#0" expanded="true" />
+            <element signature="e#3479#3518#0" expanded="true" />
+            <element signature="e#3849#4035#0" expanded="true" />
+            <element signature="e#4057#4084#0" expanded="true" />
+            <element signature="e#4287#4326#0" expanded="true" />
+            <element signature="e#4458#4500#0" expanded="true" />
+            <element signature="e#4799#4832#0" expanded="true" />
+            <element signature="e#5000#5032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/js/world.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3079#3099#0" expanded="true" />
+            <element signature="e#3210#3237#0" expanded="true" />
+            <element signature="e#3479#3518#0" expanded="true" />
+            <element signature="e#3849#4035#0" expanded="true" />
+            <element signature="e#4057#4084#0" expanded="true" />
+            <element signature="e#4287#4326#0" expanded="true" />
+            <element signature="e#4458#4500#0" expanded="true" />
+            <element signature="e#4799#4832#0" expanded="true" />
+            <element signature="e#5000#5032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/js/world.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="e#3030#3050#0" expanded="true" />
-            <element signature="e#3161#3188#0" expanded="true" />
-            <element signature="e#3430#3469#0" expanded="true" />
-            <element signature="e#3800#3986#0" expanded="true" />
-            <element signature="e#4008#4035#0" expanded="true" />
-            <element signature="e#4238#4277#0" expanded="true" />
-            <element signature="e#4409#4451#0" expanded="true" />
-            <element signature="e#4750#4783#0" expanded="true" />
-            <element signature="e#4951#4983#0" expanded="true" />
+            <element signature="e#3079#3099#0" expanded="true" />
+            <element signature="e#3210#3237#0" expanded="true" />
+            <element signature="e#3479#3518#0" expanded="true" />
+            <element signature="e#3849#4035#0" expanded="true" />
+            <element signature="e#4057#4084#0" expanded="true" />
+            <element signature="e#4287#4326#0" expanded="true" />
+            <element signature="e#4458#4500#0" expanded="true" />
+            <element signature="e#4799#4832#0" expanded="true" />
+            <element signature="e#5000#5032#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2482,7 +2582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2490,7 +2589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2514,15 +2612,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3030#3050#0" expanded="true" />
-            <element signature="e#3161#3188#0" expanded="true" />
-            <element signature="e#3430#3469#0" expanded="true" />
-            <element signature="e#3800#3986#0" expanded="true" />
-            <element signature="e#4008#4035#0" expanded="true" />
-            <element signature="e#4238#4277#0" expanded="true" />
-            <element signature="e#4409#4451#0" expanded="true" />
-            <element signature="e#4750#4783#0" expanded="true" />
-            <element signature="e#4951#4983#0" expanded="true" />
+            <element signature="e#3079#3099#0" expanded="true" />
+            <element signature="e#3210#3237#0" expanded="true" />
+            <element signature="e#3479#3518#0" expanded="true" />
+            <element signature="e#3849#4035#0" expanded="true" />
+            <element signature="e#4057#4084#0" expanded="true" />
+            <element signature="e#4287#4326#0" expanded="true" />
+            <element signature="e#4458#4500#0" expanded="true" />
+            <element signature="e#4799#4832#0" expanded="true" />
+            <element signature="e#5000#5032#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2539,7 +2637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2582,7 +2679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.93914807">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2627,7 +2723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4674221">
           <caret line="154" column="9" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2643,7 +2738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47191012">
           <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2658,7 +2752,7 @@
     <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2667,7 +2761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2681,18 +2774,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/world/6_BrowsingPois_1_PresentingDetails/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45939085">
-          <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.42992875">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
-            <element signature="e#3030#3050#0" expanded="true" />
-            <element signature="e#3161#3188#0" expanded="true" />
-            <element signature="e#3430#3469#0" expanded="true" />
-            <element signature="e#3800#3986#0" expanded="true" />
-            <element signature="e#4008#4035#0" expanded="true" />
-            <element signature="e#4238#4277#0" expanded="true" />
-            <element signature="e#4409#4451#0" expanded="true" />
-            <element signature="e#4750#4783#0" expanded="true" />
-            <element signature="e#4951#4983#0" expanded="true" />
+            <element signature="e#3079#3099#0" expanded="true" />
+            <element signature="e#3210#3237#0" expanded="true" />
+            <element signature="e#3479#3518#0" expanded="true" />
+            <element signature="e#3849#4035#0" expanded="true" />
+            <element signature="e#4057#4084#0" expanded="true" />
+            <element signature="e#4287#4326#0" expanded="true" />
+            <element signature="e#4458#4500#0" expanded="true" />
+            <element signature="e#4799#4832#0" expanded="true" />
+            <element signature="e#5000#5032#0" expanded="true" />
           </folding>
         </state>
       </provider>

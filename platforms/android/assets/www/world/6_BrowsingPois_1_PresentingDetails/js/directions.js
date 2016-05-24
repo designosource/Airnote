@@ -14,6 +14,7 @@ $( document ).ready(function() {
         $('.nav').show();
         $("#menubutton").show();
         $("#right-panel").hide();
+        $("#directions_api_txt").hide();
         World.currentMarker.setDeselected(World.currentMarker);
     });
 
@@ -60,6 +61,8 @@ function initMap() {
 
         $("#donav_btn").click(function() {
             $('.nav').hide();
+            $("#right-panel").show();
+            $("#directions_api_txt").show();
             $("#menubutton").hide();
             calculateAndDisplayRoute(directionsService, directionsDisplay);
         });
