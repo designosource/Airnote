@@ -11,9 +11,13 @@ var user_longitude = "4.4822998";
 $( document ).ready(function() {
     $("#stop_nav").on("click", function() {
         $(this).hide();
+        $('.nav').show();
+        $("#menubutton").show();
         $("#right-panel").hide();
         World.currentMarker.setDeselected(World.currentMarker);
     });
+
+
 });
 
 //navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -55,6 +59,8 @@ function initMap() {
         document.getElementById('end').addEventListener('change', onChangeHandler);*/
 
         $("#donav_btn").click(function() {
+            $('.nav').hide();
+            $("#menubutton").hide();
             calculateAndDisplayRoute(directionsService, directionsDisplay);
         });
 }

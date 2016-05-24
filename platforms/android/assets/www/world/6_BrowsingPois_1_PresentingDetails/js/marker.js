@@ -39,7 +39,7 @@ function Marker(poiData) {
         zOrder: 1,
         offsetY: 0.55,
         style: {
-            textColor: '#FFFFFF',
+            textColor: '#001259',
             fontStyle: AR.CONST.FONT_STYLE.BOLD
         }
     });
@@ -49,7 +49,8 @@ function Marker(poiData) {
         zOrder: 1,
         offsetY: -0.55,
         style: {
-            textColor: '#FFFFFF'
+            fontSize: '15px',
+            textColor: '#001259'
         }
     });
 
@@ -98,7 +99,7 @@ Marker.prototype.getOnClickTrigger = function(marker) {
 
             }
         } else {
-            AR.logger.debug('a animation is already running');
+            AR.logger.debug('an animation is already running');
         }
 
 

@@ -266,7 +266,7 @@ html{
 
 #panel-poidetail #close_btn{margin-top: 20px !important;}
 
-#panel-settings #close_btn,#panel-poidetail #close_btn, #panel-poidetail #donav_btn{
+#stop_nav, #panel-settings #close_btn,#panel-poidetail #close_btn, #panel-poidetail #donav_btn{
 	font-family: distress;
 	font-size: 17px;
 	color: #001259;
@@ -280,3 +280,32 @@ html{
 	background-image: url(../assets/btn.svg);
 	text-align: center;
 }
+
+#stop_nav{position: absolute;margin: 0 auto;margin-top: 550px;margin-left: 55px;background-image: url(../assets/btn-1.svg);}
+
+/*gmaps*/
+
+#right-panel{
+	height: 50px !important;
+	z-index: -1px;
+	display: block;
+	overflow: auto;
+	margin-top: 470px;
+}
+
+#right-panel .adp-warnbox{display: none;}
+
+#right-panel .adp-directions{background-color: white;width: 70%;margin: 0 auto;
+	background-image: url(../assets/btn-1.svg);
+	background-size: 100% 100%;
+}
+
+#right-panel .adp-placemark, #right-panel .adp-summary{
+	display:none;
+}
+
+#right-panel .adp-legal{
+	display:none;
+}
+
+

@@ -37,7 +37,6 @@
 
     <!-- GMAPS -->
     <script type="text/javascript" src="js/directions.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmcG1TWd1K7NCMYovjb5FIQ0d8Q0NDf9M&callback=initMap">
     </script>
@@ -54,7 +53,7 @@
          </ul>-->
 
          <a id="menubutton" class="mainmenu_button" href="#panel-settings"></a>
-         <a id="stop_nav" style="display: none;" data-role="button">Stop Navigation</a>
+         <a id="stop_nav" style="display: none;">Stop Navigation</a>
 
     <div id="floating-panel" style="display: none;">
       
@@ -83,7 +82,7 @@
                  <h4> Range: <a id="panel-distance-value"></a></h4>-->
             <div class="radiusding">
                  <!-- Amount of visible places -->
-                 <p style="font-size:25px;text-align:center;">Airnotes Radious<a id="panel-distance-places"></a></p>
+                 <p style="font-size:25px;text-align:left;">Airnotes Radious<a id="panel-distance-places"></a></p>
 
                  <!-- default slider -->
                  <input id="panel-distance-range" type="range" data-highlight="true" name="rangeSlider" min="0" max="100" value="100" data-show-value="false" step="5" data-popup-enabled="false">
@@ -95,9 +94,9 @@
              </div>
 
              <div class="privateinfo">
-                 <p style="font-size:25px;text-align:center;">Private information</p>
+                 <p style="font-size:25px;text-align:left;">Private information</p>
                  
-                 <p id="mailbundel"><img src="assets/mail.png" id="mailpng" alt=""><span style="margin-left: 10px;">info@designosource.be</span></p>
+                 <p id="mailbundel"><img src="assets/mail.png" id="mailpng" alt=""><span style="margin-left: 10px;margin-top:-10px">info@designosource.be</span></p>
              </div>
 
              <a id="close_btn" data-rel="close">Back To View</a>
