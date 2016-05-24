@@ -4,7 +4,7 @@ body {
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 
     width: 100%;
-    background-image: url("../img/splash.jpg");
+    background-image: url("../img/splash.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -16,4 +16,27 @@ body {
 body, html { 
     overflow-x: hidden; 
     overflow-y: auto;
+}
+
+@font-face {
+    font-family: distress;
+    src: url(../fonts/distress.otf);
+    font-weight: normal;
+}
+
+#startbtn{
+    font-family: distress;
+    font-size: 17px;
+    color: #001259;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    width: 70%;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/btn.svg);
+    text-align: center;
+    margin-top: 430px;
+    text-decoration: none;
 }

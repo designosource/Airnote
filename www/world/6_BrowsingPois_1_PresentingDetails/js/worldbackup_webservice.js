@@ -54,8 +54,8 @@ var World = {
 		World.markerList = [];
 
 		// start loading marker assets
-		World.markerDrawable_idle = new AR.ImageResource("assets/marker_idle.png");
-		World.markerDrawable_selected = new AR.ImageResource("assets/marker_selected.png");
+		World.markerDrawable_idle = new AR.ImageResource("assets/note-02.svg");
+		World.markerDrawable_selected = new AR.ImageResource("assets/note-02.svg");
 		World.markerDrawable_directionIndicator = new AR.ImageResource("assets/indi.png");
 
 		//alert("2data:"+poiData);
