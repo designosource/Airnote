@@ -18,7 +18,15 @@ $( document ).ready(function() {
         World.currentMarker.setDeselected(World.currentMarker);
     });
 
-
+    $(".nav_drinks").on("click", function() {
+        $("#helptxt1").hide();
+    });
+    $(".nav_food").on("click", function() {
+        $("#helptxt1").hide();
+    });
+    $(".nav_sights").on("click", function() {
+        $("#helptxt1").hide();
+    });
 });
 
 //navigator.geolocation.getCurrentPosition(onSuccess, onError);

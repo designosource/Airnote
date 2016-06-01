@@ -51,6 +51,11 @@
              <li><a href="#panel-settings" class="btn_settings">settings</a></li>
              <li><a href="#preferences">preferences</a></li>
          </ul>-->
+        
+        <a id="helptxt1" class="helptxt1" href="#">
+            <img src="assets/helptxt1.png" alt="">
+        </a>
+
 
          <a id="menubutton" class="mainmenu_button" href="#panel-settings"></a>
          <a id="stop_nav" style="display: none;">Stop Navigation</a>
@@ -79,7 +84,8 @@
          <div data-role="panel" id="panel-settings" data-position="left" data-display="overlay" style="width: 100%;" data-theme="c">
 
              <!-- distance information, calculated/updated in code  -->
-                 <h4 style="text-align: center;">Application Settings</h4>
+                 <h4 style="width:100%">
+                    <a data-rel="close"><img src="assets/arrowleft.png" id="arrowleft" style="margin-left: 5%;margin-right: 30px;width: 12px;" alt=""></a>Application Settings</h4>
                  <!-- Range in m/km
                  <h4> Range: <a id="panel-distance-value"></a></h4>-->
             <div class="radiusding">
@@ -90,15 +96,15 @@
                  <input id="panel-distance-range" type="range" data-highlight="true" name="rangeSlider" min="0" max="100" value="100" data-show-value="false" step="5" data-popup-enabled="false">
             </div>
 
-             <div style="width: 95%;background-color: white;border-style: solid;
-    border-bottom-color: #decd00;border-top: 0; border-left: 0;border-right: 0;color:#001259;display:block;margin: 0 auto;">
+             <div style="width: 95%;background-color: white;border-style: solid; border-width: 1px;
+    border-bottom-color: rgba(222, 205, 0, .3);border-top: 0; border-left: 0;border-right: 0;color:#001259;display:block;margin: 0 auto;">
                  <p style="padding: 20px 20px;">By using this application you are indicating that you have read the Privacy Policy and agree to the Terms of Service.</p>
              </div>
 
              <div class="privateinfo">
                  <p style="font-size:25px;text-align:left;">Private information</p>
                  
-                 <p id="mailbundel"><img src="assets/mail.png" id="mailpng" alt=""><span style="margin-left: 10px;margin-top:-10px">info@designosource.be</span></p>
+                 <p id="mailbundel"><img src="assets/mail.png" id="mailpng" alt="" style="width:15px;height: 10px;"><span style="margin-left: 10px;margin-top:-10px;line-height: 30px;">info@designosource.be</span></p>
              </div>
 
              <a id="close_btn" data-rel="close">Back To View</a>

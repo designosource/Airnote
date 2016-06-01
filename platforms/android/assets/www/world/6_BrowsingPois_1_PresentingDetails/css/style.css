@@ -272,7 +272,7 @@ html{
 	color: #001259;
 	display: block;
 	height: 50px;
-	line-height: 50px;
+	line-height: 55px;
 	width: 70%;
 	margin: 0 auto;
 	background-size: 100% 100%;
@@ -327,4 +327,10 @@ html{
 	display:none;
 }
 
+/*helptxt*/
 
+#helptxt1{position: absolute;margin: 0 auto;margin-top: 450px;margin-left: 0px;}
+
+#helptxt1 img{width: 300px;padding: 10%;}
+
+#arrowleft {width:30px;}
