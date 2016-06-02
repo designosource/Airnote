@@ -27,6 +27,29 @@ $( document ).ready(function() {
     $(".nav_sights").on("click", function() {
         $("#helptxt1").hide();
     });
+    $("#donav_btn").on("click", function() {
+        $("#helptxt1").hide();
+    });
+    $(".asd").on("click", function() {
+        $("#helptxt1").hide();
+    });
+
+    var toggle = true;
+
+    $(".more_directions").on("click", function() {
+       if(toggle === true){
+            $("#directions_api_txt").addClass("directions_expand");
+            $("#right-panel").addClass("right-panel_expand");
+            $(".more_directions").addClass("rotatethatshit");
+            toggle = false;
+        }
+        else{
+            $("#directions_api_txt").removeClass("directions_expand");
+            $("#right-panel").removeClass("right-panel_expand");
+            $(".more_directions").removeClass("rotatethatshit");
+            toggle = true;
+        }
+    });
 });
 
 //navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -77,7 +100,10 @@ function initMap() {
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-  var start = "Lange Ridderstraat 44, 2800 Mechelen";
+  //var start = "Lange Ridderstraat 44, 2800 Mechelen";
+  var start = "Oude Brusselsestraat 10,2800 Mechelen";
+  
+  //dynamic addresses, turned of because of demo purposes
   //var start = ReverseGeocode(user_latitude, user_longitude);
   var end = $('#poi-detail-address').text();
   directionsService.route({

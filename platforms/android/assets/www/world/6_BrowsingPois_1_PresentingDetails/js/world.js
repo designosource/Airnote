@@ -121,6 +121,7 @@ var World = {
 		*/
 		// update panel values
 		$("#poi-detail-title").html(marker.poiData.title);
+		$("#poi-detail-road").html(marker.poiData.title);
 		$("#poi-detail-description").html(marker.poiData.description);
 		$("#poi-detail-address").html(marker.poiData.address);
 

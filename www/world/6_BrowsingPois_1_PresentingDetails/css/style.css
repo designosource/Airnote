@@ -1,3 +1,7 @@
+/*I know its messy
+Look: there weren't any coding standards in this project and limited time sooooooo.. yolo
+*/
+
 @font-face {
     font-family: abadi;
     src: url(../fonts/abadi_extrabold.ttf);
@@ -286,17 +290,21 @@ html{
 /*gmaps*/
 #directions_api_txt{
 	display: none;
-	height: 60px !important;
+	/*height: 60px !important;*/
 	width: 100%;
-	background-image: url(../assets/btn-1.svg);
+	/*background-image: url(../assets/btn-1.svg);
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	margin-top: 460px;
+	background-size: 100% 100%;*/
+	background-color: rgba(255, 255, 255, .8);
+	height: 120px;
+	margin-top: 0px;
 	padding-top: 5px;
+
+	transition: all 1s ease-in-out;
 }
 
 #right-panel{
-	height: 20px !important;
+	height: 60px;
 	z-index: -1px;
 	display: block;
 	overflow: auto;
@@ -304,11 +312,31 @@ html{
 	padding: 5px;
 	padding-top: 10px;
 	margin-top: 10px;
+
+	transition: all 1s ease-in-out;
+}
+
+.directions_expand{
+	height: 99% !important;
+}
+
+.right-panel_expand{
+	height: 90% !important;
+}
+
+.rotatethatshit{
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+    transition: all 1s ease-in;
 }
 
 #right-panel .adp-warnbox{display: none;}
 
-#right-panel .adp-directions{width: 70%;margin: 0 auto;
+#right-panel .adp-directions{width: 90%;margin: 0 auto;
 	height: 30px;
 	overflow: auto;
 	padding-top: 1px;
@@ -317,6 +345,7 @@ html{
 
 #right-panel .adp-step, #right-panel .adp-substep {border:0;margin-top:1px;
 	padding: 0px 3px 3px 1px;
+	padding-bottom:20px;
 }
 
 #right-panel .adp-placemark, #right-panel .adp-summary{
