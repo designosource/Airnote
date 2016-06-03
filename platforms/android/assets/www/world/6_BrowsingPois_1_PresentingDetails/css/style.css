@@ -295,7 +295,8 @@ html{
 	/*background-image: url(../assets/btn-1.svg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;*/
-	background-color: rgba(255, 255, 255, .8);
+	/*background-color: rgba(255, 255, 255, .8);*/
+	background-color: white;
 	height: 120px;
 	margin-top: 0px;
 	padding-top: 5px;
@@ -317,7 +318,7 @@ html{
 }
 
 .directions_expand{
-	height: 99% !important;
+	height: 500px !important;
 }
 
 .right-panel_expand{
